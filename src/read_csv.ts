@@ -1,6 +1,6 @@
 import { readCSV } from "https://deno.land/x/csv/mod.ts";
 
-const f = await Deno.open("C:\\Users\\mike\\Documents\\Data_Files\\books.csv");
+const f = await Deno.open(".\\books.csv");  //add correct file path
 
 for await (const row of readCSV(f)) {
   console.log("row: ");
@@ -9,4 +9,4 @@ for await (const row of readCSV(f)) {
   }
 }
 
-f.close();
+f.close(); //close opened file 
